@@ -1,2 +1,42 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая на вход
+//1. на вход принимает число и 
+//2.выдает его квадрат (число
+// умноженное на само себя).
+// 3. Вывод результата
+
+//Например:
+//-4 -> 16
+//-3 -> 9
+//-7 -> 49
+
+Console.Write("Введите целое число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int square = number*number;
+Console.WriteLine($"Квадрат числа {number} = {square}");
+//Math.Pow(number,2);
+//string str1 = Console.ReadLine();
+
+//string struct = "343453";
+//double d = 4.545;
+
+//Программа которая на вход принмает два числа 
+//и проверяет, является ли первое число квадратом 
+//второго
+//a = 25, b = 5 -> да
+//а = 2, b = 10 -> нет
+// а = 9, b = -3 -> да
+// а = -3, b = 9 -> нет
+//bool b = number == square
+
+//if (number != square && number > 10 && square < 10);
+
+// Напишите программу, которая будет выдавать 
+//название дня недели по заданному номеру
+// 3 -> Среда
+// 5 -> Пятница
+
+//if (
+{
+
+}
+)
