@@ -6,16 +6,12 @@
 Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int i = 0;
-while (i <= num);
+while (i <= num)
 {
     int res1 = i % 2;
     if (res1 == 0)
     {
-        Console.Write($"{i},");
-        i++;
+        Console.Write($"{i}, ");
     }
-    else
-    {
-    i++;
-    }
+i++;
 }
