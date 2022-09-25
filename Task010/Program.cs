@@ -6,4 +6,9 @@
 //782 -> 8
 //918 -> 1
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Введите трехзначное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int num1 = (number / 10);
+int result = (num1 % 10);
+Console.WriteLine($"Вторая цифра числа: {result}");
+
