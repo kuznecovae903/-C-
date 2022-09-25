@@ -5,9 +5,20 @@
 //918 -> 98
 
 
+//int number = new Random().Next(100,1000);
+//Console.WriteLine($"Случайное трехзначное число {number}");
+//int first = number /100;
+//int second = number % 10;
+//int result = first*10 + second;
+//Console.WriteLine($"Требуемое двухзначное число: {result}");
+
 int number = new Random().Next(100,1000);
 Console.WriteLine($"Случайное трехзначное число {number}");
-int first = number /100;
-int second = number % 10;
-int result = first*10 + second;
+int DeleteSecondDigit (int num)
+{
+    int first = number /100;
+    int second = number % 10;
+    return first*10 + second;
+}
+int result = DeleteSecondDigit(number);
 Console.WriteLine($"Требуемое двухзначное число: {result}");
