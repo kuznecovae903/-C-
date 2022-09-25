@@ -34,4 +34,5 @@ bool IsEqualDigit(int num1, int num2)
     return num1 == num2;
 }
 int maxDigit = MaxDigit(number);
+string result = maxDigit != -1 ? maxDigit.ToString(): "Цифры одинвковые"; 
 Console.WriteLine ($"наибольшая цифра числа {number} -> {MaxDigit}");
