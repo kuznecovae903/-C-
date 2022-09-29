@@ -24,7 +24,7 @@ else
 
 string StringOfQub (int number)
 {
-    return $"|{number} | {number*number*number} |";
+    return $"|{number,3} | {number*number*number,4} |";
 }
 
 //while (i <= numX)
