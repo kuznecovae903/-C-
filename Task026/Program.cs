@@ -7,9 +7,10 @@
 
 Console.Write("Введите число: ");
 int numA = Convert.ToInt32(Console.ReadLine());
-Console.Write($"Количество цифр в числе {numA} равно {CountDigits(numA)}");
+//Console.Write($"Количество цифр в числе {numA} равно {CountDigits(numA)}");
+Console.Write($"Количество цифр в числе {numA} равно {FindCount(numA)}");
 
-
+/*
 int CountDigits (int end)
 {
     int counter = 0;
@@ -23,9 +24,9 @@ int CountDigits (int end)
     }
     return counter;
 }
-
+*/
 //Console.Write($"Количество цифр в числе {numA} равно {CountDigits(numA)}");
-/*
+
 int FindCount(int num)
 {
     int count = 0;
@@ -38,4 +39,3 @@ int FindCount(int num)
     }
     return count;
 }
-*/
