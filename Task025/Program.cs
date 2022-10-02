@@ -10,3 +10,5 @@ Console.WriteLine("число B: ");
 int numB = Convert.ToInt32(Console.ReadLine());
 
 
+
+
