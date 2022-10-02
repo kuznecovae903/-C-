@@ -18,7 +18,7 @@ int number = Convert.ToInt32(Console.ReadLine());
     //}
     //return sum;
 //}
-
+/*
 int Factorial (int numb)
 {
     int fact = numb;
@@ -31,3 +31,15 @@ int Factorial (int numb)
 }
 int factorial = Factorial (number);
 Console.WriteLine (factorial);
+*/
+int MakeFactorial (int num)
+{
+  int factorial = 1;
+  for (int i = 1; i <= num; i++)
+  {
+    factorial *= i;
+  }
+  return factorial;
+}
+int result = MakeFactorial(number);
+Console.WriteLine($"{number} -> {result}");
