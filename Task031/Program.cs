@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-int[] CreateArrayRndInt(int size, 
+int[] CreateArrayRndInt(int size, int min, int max)
 void PrintArray(int[] array)
 int GetSumPositiveElem(int[] 
 int GetSumNegativeElem(int[] array)
