@@ -12,7 +12,8 @@ PrintArray();
 
 void FillArreRandom()
 {
-    for (int i = 0; i <= array.Length - 1; i++) array[i] = new Random().Next(0, 100);
+    for (int i = 0; i <= array.Length - 1; i++) 
+    array[i] = new Random().Next(0, 100);
 }
 
 void PrintArray()
