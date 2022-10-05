@@ -9,3 +9,37 @@
 
 
 //Console.WriteLine("Hello, World!");
+int[] CreateArrayRndInt(int size, int min, int max)
+{
+    int[] array = new int[size];
+    var rnd = new Random();
+
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = rnd.Next(min, max + 1);
+    }
+    return array;
+}
+
+void PrintArray(int[] array)
+{
+    Console.Write("[");
+    for (int i = 0; i <= array.Length - 2; i++) Console.Write($"{array[i]},");
+    Console.Write($"{array[array.Length - 1]}]");
+}
+
+int CountofDeca(int[] array)
+{
+    int result = default;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] >= 10 && array[i] <=99) result++;   
+    }
+    return result;
+}
+
+int[] arr = CreateArrayRndInt(10, 1 ,150);
+PrintArray(arr);
+int resultMetod = CountofDeca(arr);
+Console.Write($"В массиве {resultMetod} значений, которые находятся в диапазоне от 10 до 99");
+
