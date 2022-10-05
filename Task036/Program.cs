@@ -38,5 +38,5 @@ int SumOddIndex(int[] array)
 
 int[] arr = CreateArrayRndInt(10, 100, 999);
 PrintArray(arr);
-int summOdd = SumOddIndex(arr);
-Console.WriteLine($"Сумма элементов на нечетных позициях: {summOdd}");
+int summOddIndex = SumOddIndex(arr);
+Console.WriteLine($"Сумма элементов на нечетных позициях: {summOddIndex}");
