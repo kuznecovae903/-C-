@@ -37,7 +37,8 @@ int[] MultipleArrayElements(int[] array)
     {
        result[i] = array[i] * array[array.Length-i-1]; 
     }
-
+//здесь добавляется "средний" элемент в новый массив, 
+//если в первоначальном массиве нечетное кол-во элементов
     if (array.Length % 2 != 0)
          result[lengthNewArray-1] = array[array.Length / 2 ];
 

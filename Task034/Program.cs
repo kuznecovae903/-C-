@@ -26,7 +26,7 @@ void PrintArray(int[] array)
     Console.WriteLine("]");
 }
 
-int CheckEven(int[] array)
+int CheckPositiveNum(int[] array)
 {
     int result = default;
     for (int i = 0; i < array.Length; i++)
@@ -39,5 +39,5 @@ int CheckEven(int[] array)
 
 int[] arr = CreateArrayRndInt(10, 100, 999);
 PrintArray(arr);
-int countEven = CheckEven(arr);
-Console.Write($"Кол-во четных чисел в массиве: {countEven}");
+int chekPositiveNum = CheckPositiveNum(arr);
+Console.Write($"Кол-во четных чисел в массиве: {chekPositiveNum}");
