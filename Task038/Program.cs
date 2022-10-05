@@ -9,7 +9,7 @@ double[] CreateArrayRndDoub(int size)
     var rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = Math.Round(rnd.NextDouble() * 100, 2);
+        array[i] = Math.Round(rnd.NextDouble() * 100, 1);
     }
     return array;
 }
@@ -25,23 +25,20 @@ void PrintArray(double[] array)
     Console.WriteLine("]");
 }
 
-double DiffArr(double[] array)
+double DifferenceNumberArr(double[] array)
 {
-    double maxValue = array[0];
-    double minValue = array[0];
+    double maxNum = array[0];
+    double minNum = array[0];
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] > maxValue) maxValue = array[i];
-        if (array[i] < minValue) minValue = array[i];
+        if (array[i] > maxNum) maxNum = array[i];
+        if (array[i] < minNum) minNum = array[i];
     }
-    double result = maxValue - minValue;
+    double result = maxNum - minNum;
     return result;
 }
 
-
-
 double[] arr = CreateArrayRndDoub(5);
 PrintArray(arr);
-double diffMaxMinArr = DiffArr(arr);
-Console.Write($"Разница между максимальным и минимальными занчениями массива: {diffMaxMinArr}");
-Footer
+double diffMaxMinNumArr = DifferenceNumberArr(arr);
+Console.Write($"Разница между максимальным и минимальными занчениями массива: {diffMaxMinNumArr}");
