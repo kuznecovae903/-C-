@@ -38,7 +38,7 @@ void ConvertToBin2(int num)
     if (num > 0)
     {
        bin += num % 2;         
-       ConvertToBin2(num / 2);    
+       ConvertToBin2(num / 2);    //компилятор преобразует самостоятельно
     }
      
     Console.Write(bin);
@@ -47,3 +47,12 @@ void ConvertToBin2(int num)
 Console.Write("Введите число для перевода, не равное 0: ");
 int num = Convert.ToInt32(Console.ReadLine());
 ConvertToBin2(num);
+/*
+// самый короткий вариант метода с рекурсией
+void ConvertToBin3(int num)
+{
+    if (num == 0) return:
+    ConvertToBin2(num / 2);    //компилятор преобразует самостоятельно
+    Console.Write(num % 2);
+}
+*/

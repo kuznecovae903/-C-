@@ -5,7 +5,8 @@
 int[] arr = CreateArrayRndInt(5,1,8);
 PrintArray(arr);
 int[] arr2 = CopyArray(arr);
-//arr2[0] = 100;
+//arr2[0] = 100; - это для проверки, что arr2 формируется.
+Console.WriteLine();
 PrintArray(arr2);
 
 int[] CopyArray(int[] array)

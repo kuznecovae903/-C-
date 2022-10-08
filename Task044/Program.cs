@@ -9,14 +9,14 @@ int numA = Convert.ToInt32(Console.ReadLine());
 
 void Fibonacci(int num)
 {
-    int num1 = 0;
-    int num2 = 1;
+    int num1 = 0; //первое и второе числа известны (0 и 1)
+    int num2 = 1;// поэтому начинаем с третьего элемента массива
     int num3 = default;
-    Console.Write($"N = {numA} -> {num1} {num2}");
+    Console.Write($"N = {numA} -> {num1} {num2}");// первые два элемента печатаем
     for (int i = 2; i < num; i++)
     {
         num3 = num1 + num2;
-        Console.Write($" {num3}");
+        Console.Write($" {num3}"); //печать начиная с третьего
         num1 = num2;
         num2 = num3;
         
@@ -25,6 +25,4 @@ void Fibonacci(int num)
 
 Fibonacci(numA);
 
-//Задача 45: Напишите программу, которая будет создавать
-//копию заданного массива с помощью поэлементного
-//копирования.
+
