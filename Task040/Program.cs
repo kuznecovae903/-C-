@@ -20,3 +20,22 @@ int a3 = Convert.ToInt32(Console.ReadLine());
 bool resultCheck = CheckTriangle(a1, a2, a3);
 if (resultCheck) Console.Write("Такой треугольник возможен");
 else Console.Write("Такой треугольник не возможен");
+
+/*
+vConsole.Write("Введите длинну первой стороны:");
+int numA = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите длинну второй стороны:");
+int numB = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите длинну третьей стороны:");
+int numC = Convert.ToInt32(Console.ReadLine());
+
+bool IsTriangleReal(int nA, int nB, int nC)
+{
+bool result = true;
+if ((nA + nB < nC) || (nA + nC < nB) || (nC + nB < nA)) result = false;
+return result;
+}
+
+if (IsTriangleReal(numA, numB, numC)) Console.Write("треугольник с такими сторонами может существовать");
+else Console.Write("треугольник с такими сторонами не может существовать");
+*/
