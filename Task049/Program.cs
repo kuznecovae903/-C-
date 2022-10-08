@@ -33,4 +33,4 @@ void PrintMatrix(int[,] matrix)
 int[,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
 PrintMatrix(array2D);
 
-Console.WriteLine("Hello, World!");
+
