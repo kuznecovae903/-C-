@@ -14,7 +14,7 @@ string ReverseArrayFramework(string str)
 string deciToBin(int num)
 {
     string result = default;
-    int i = 0;
+    //int i = 0;
     while (num >= 1)
     {
         result = result + (num % 2);
@@ -24,11 +24,11 @@ string deciToBin(int num)
     return result;
 }
 
-Console.Write("Введите число для перевода: ");
+Console.Write("Введите число для перевода, не равное 0: ");
 int num = Convert.ToInt32(Console.ReadLine());
 string num2 = deciToBin(num);
 Console.Write($"{num2}");
-
+/*
 //Решение с рекурсией (рекурсия возвращает "решение" в обратном порядке)
 void ConvertToBin2(int num)
 {
@@ -42,3 +42,4 @@ void ConvertToBin2(int num)
 
     Console.Write(bin);
 }
+*/

@@ -14,7 +14,6 @@ void PrintArrayNum(int[] arr)
     Console.WriteLine("]");
 }
 
-
 int[] EnterNumber(int count)
 {
     int[] result1 = new int[count];
@@ -35,9 +34,24 @@ int CountPositive(int[] arr)
     return result2;
 }
 
-
 Console.Write("Введите сколько чисел вы хотите ввести: ");
 int countNumber = Convert.ToInt32(Console.ReadLine());
 int[] array = EnterNumber(countNumber);
 PrintArrayNum(array);
 Console.Write($"Количество положительных чисел -> {CountPositive(array)}");
+
+/*
+Console.Write("Введите элементы(через пробел): ");
+int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+int count = 0;
+ 
+for (int i = 0; i < arr.Length; i++)
+{
+    if (arr[i] > 0)
+    {
+        count++;
+    }
+}
+ 
+Console.WriteLine($"Кол-во элементов больше 0: {count}");
+*/
