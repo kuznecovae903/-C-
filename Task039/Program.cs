@@ -25,7 +25,7 @@ void PrintArray(int[] array)
 {
 Console.Write("[");
 for (int i = 0; i <= array.Length - 2; i++) Console.Write($"{array[i]},");
-Console.Write($"{array[array.Length - 1]}]");
+Console.WriteLine($"{array[array.Length - 1]}]");
 }
 //метод разворота массива 1:
 void ReverseArray(int[] array)
@@ -65,4 +65,4 @@ ReverseArray(arr);
 PrintArray(arr);
 
 
-Console.WriteLine("Hello, World!");
+
