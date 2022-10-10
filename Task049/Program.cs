@@ -2,9 +2,9 @@
 //которых оба индекса чётные, и замените эти элементы на их
 //квадраты.
 
-int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
+double[,] CreateMatrixRndDoub(int rows, int columns, int min, int max)
 {
-     int[,] matrix = new int[rows, columns];
+     double[,] matrix = new double[rows, columns];
     var rnd = new Random();
 
     for (int i = 0; i < matrix.GetLength(0); i++) // 0 - rows  0 
@@ -17,7 +17,7 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
     return matrix;
 }
 
-void PrintMatrix(int[,] matrix)
+void PrintMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -30,7 +30,23 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("|");
     }
 }
-int[,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
+//int[,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
+//PrintMatrix(array2D);
+
+void PowDivIndex(double[,] matrix)
+{
+
+    for (int i = 0; i < matrix.GetLength(0); i+=2)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j+=2)
+        {
+            matrix[i, j] = Math.Pow(matrix[i, j], 2);
+        }
+    }
+}
+
+double[,] array2D = CreateMatrixRndDoub(4, 3, 0, 10);
 PrintMatrix(array2D);
-
-
+PowDivIndex(array2D);
+Console.WriteLine();
+PrintMatrix(array2D);
