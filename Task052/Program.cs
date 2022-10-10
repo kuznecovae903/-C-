@@ -37,5 +37,37 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] array2D = CreateMatrixRndInt(3, 4, -100, 100);
+Console.WriteLine("введите количество строк массива");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите количество столбцов массива");
+int m = Convert.ToInt32(Console.ReadLine());
+
+int[,] array2D = CreateMatrixRndInt(n, m, -10, 10);
 PrintMatrix(array2D);
+Console.WriteLine();
+//AvarageArifmeticNumColumns(array2D);
+for (int j = 0; j < array2D.GetLength(1); j++)
+    {
+        double avarage = 0;
+        for (int i = 0; i < array2D.GetLength(0); i++)
+        {
+            avarage = (avarage + array2D[i, j]);
+        }
+        avarage = avarage / array2D.GetLength(0);
+        Console.Write(avarage + "; ");
+    }
+/*
+int AvarageArifmeticNumColumns(int[,] matrix) //не поняла почему не все 
+{
+    for (int j = 0; j < array2D.GetLength(1); j++)
+    {
+        double avarage = 0;
+        for (int i = 0; i < array2D.GetLength(0); i++)
+        {
+            avarage = (avarage + array2D[i, j]);
+        }
+        avarage = avarage / array2D.GetLength(0);
+        Console.Write(avarage + "; ");
+    }
+}
+*/
