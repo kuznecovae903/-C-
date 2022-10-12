@@ -57,7 +57,7 @@ for (int j = 0; j < array2D.GetLength(1); j++)
         Console.Write(avarage + "; ");
     }
 /*
-int AvarageArifmeticNumColumns(int[,] matrix) //не поняла почему не все 
+int AvarageArifmeticNumColumns(int[,] matrix) //сделать методом так и не смогла 
 {
     for (int j = 0; j < array2D.GetLength(1); j++)
     {
