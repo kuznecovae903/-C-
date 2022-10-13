@@ -43,7 +43,7 @@ int[,] DeleteMinRowsColumn(int[,] matrix, int[] minIndex)
     {
 
         if (i1 == minIndex[0])i1++;
-        for (int j = 0; j < result.GetLength(1); j++)
+        for (int j = 0; j < result.GetLength(1); j++) //здесь пропускается строка в которой индекс минимального элемента
         {
             if (j1 == minIndex[1])j1++;
             result[i,j] = matrix[i1,j1];
