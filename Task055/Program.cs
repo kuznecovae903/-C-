@@ -60,14 +60,17 @@ int[,] TranspArray(int[,] matrix)
 int[,] array2D = CreateMatrixRndInt(4, 4, 0, 9);
 PrintMatrix(array2D);
 Console.WriteLine();
+Console.WriteLine("Первый вариант");
 if (array2D.GetLength(0) == array2D.GetLength(1)) //if и else добавлены для проверки на квадратность матрицы
 {                                                 // для любой матрицы - их надо убрать  
-int[,] transpRes = TranspArray(array2D);
-PrintMatrix(transpRes);
+    int[,] transpRes = TranspArray(array2D);
+    PrintMatrix(transpRes);
 }
 else Console.Write("Ваша матрица не квадратная ");
+
+
 //второй метод решения
-int[,] TranspArray(int[,] matrix)
+int[,] TranspArray2(int[,] matrix)
 {
     int[,] result = new int[matrix.GetLength(1), matrix.GetLength(0)];
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -83,13 +86,16 @@ int[,] TranspArray(int[,] matrix)
 if (array2D.GetLength(0) == array2D.GetLength(1))
 {
 
-TransponArray2(array2D);
-Console.WriteLine("-------------------------------------");
-PrintMatrix(array2D);
+    //int[,] transpRes2 = TransponArray2(array2D);
+    int[,] array2Dtranspot = TranspArray2(array2D);
+    Console.WriteLine("-------------------------------------");
+    Console.WriteLine("Второй вариант");
+    //PrintMatrix(array2D);
+    PrintMatrix(array2Dtranspot);
 }
 else
 {
-Console.WriteLine("Массив не квадаратный!");
-int[,] array2Dtranspot = TransponArray(array2D);
-PrintMatrix(array2Dtranspot);
+    Console.WriteLine("Массив не квадаратный!");
+    //int[,] array2Dtranspot = TransponArray2(array2D);
+    //PrintMatrix(array2Dtranspot);
 }
