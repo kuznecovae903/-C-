@@ -37,25 +37,41 @@ void PrintMatrix(int[,] matrix)
     }        
 }
 
-void SumStringMatrix(int[,] matrix)
+int[] SumString(int[,] matrix)
 {
-    int index = 0;
+    int[] resultSum = new int [matrix.GetLength(0)];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        int sum = 0;
-        int minsum = 0;
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            sum += matrix[i, j];
-            if (sum <= minsum) sum = minsum;
-            index = i;        
-            
+            resultSum[i] += matrix[i,j];
         }
-        Console.Write($"Строка с минимальной суммой элементов равна {matrix[index, j]}. ");
-    }            
+    }
+    return resultSum;
 }
-   
 
-int[,] array2D = CreateMatrix(3, 4, 0, 9);
+void IndexStringMinSum(int[,] matrix)
+{
+    int[] sumString = SumString(matrix);
+    int minSumString = sumString[0];
+    int indexMinSum = 0;
+    for (int i = 0; i < sumString.GetLength(0); i++)
+    {
+        if (sumString[i] <= minSumString)
+        {
+            indexMinSum = i;
+            minSumString = sumString[i];
+        }       
+            
+    }
+    Console.Write($"Строка {indexMinSum + 1} имеет минимальную сумму элементов, равную {minSumString}. ");
+}            
+
+   
+Console.Write("Введите количество строк и столбцов в квадратном массиве: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int[,] array2D = CreateMatrix(num, num, 0, 9);
+Console.WriteLine();
 PrintMatrix(array2D);
-SumStringMatrix(array2D);
+Console.WriteLine();
+IndexStringMinSum(array2D);
